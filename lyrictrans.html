@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <input type="search" id="search" autofocus>
+  <div id="audioContainer"></div>
+  <script>
+    $('#search').keyup((e) => {
+      if (e.keyCode == 13) {
+        var Url = 'http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.catalogSug&query=' + $('#search').val()
+        $.ajax({url: Url, success: function (result) {
+          for (var item of result.song) {
+            var getPlayUrl = 'http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.song.play&songid=' + item.songid
+            $.ajax({url: getPlayUrl, success: function (result) {
+              $.ajax({url: result.songinfo.lrclink, success: function(res) {
+                var lyricStr = res;
+                // 匹配歌词文本中的换行符.制表符  
+                var regexTrim = new RegExp("[\\r\\n]", "g");  
+                // 匹配歌词文本中的时间  例如 [00:04.11]， 这种写法比较流氓，虽然可行。但只能匹配99分钟之内的时间格式 [99.04.11]  
+                var regexGetTime = new RegExp("\\[.{8}\\]", "g");   
+                // 匹配歌词文本中的歌词  例如 刘瑞琦 - 晴天  
+                var regexGetLyric = new RegExp("[^\\[\\]\\:\\.\\d]+", "g");  
+                // 用于存放时间  
+                var aTime = [];   
+                // 用于存放歌词     
+                var aLyric = [];      
+                // 存放json对象 例如 {"time": "4.11", "lyric": "刘瑞琦 - 晴天"}  
+                var jsonLyric = [];   
+                var result;  
+      
+                // 删除歌词文本中的所有换行符.制表符  
+                var lyricStr2 = lyricStr.replace(regexTrim, '');   
+      
+                // 将匹配到的时间存入数组，exec()返回的是数组，该数组只存放每一次匹配到的值。  
+                while((result=regexGetTime.exec(lyricStr2)) != null) {   
+                    aTime.push(result.toString());  
+                }  
+      
+                // 将匹配到的歌词存入数组  
+                while((result=regexGetLyric.exec(lyricStr2)) != null) {  
+                    aLyric.push(result.toString());  
+                }                     
+      
+                for(var i=0, j=aTime.length; i<j; i++) {  
+                    var obj = {};  
+                    obj.lyric = aLyric[i];  
+                    obj.time = getTime(aTime[i]);  
+                    jsonLyric.push(obj);  
+                }     
+      
+                // 打印json数组  
+                console.log(jsonLyric);   
+              }})
+            }})
+          }
+        }})
+      }
+    })
+    // 将 [00:04.11] 转化为 4.11(以 秒.毫秒 格式)   
+    function getTime(time) {          
+        var str = time;   
+        // 删除 '['  
+        str = str.substr(1);  
+        // 删除 ']'  
+        str = str.substr(0, str.length-1);    
+        var minutes = parseInt(str.slice(0, str.indexOf(':')));  
+        var seconds = parseFloat(str.substr(str.indexOf(':')+1));  
+        var newTime = (minutes*60 + seconds).toFixed(2);  
+        return newTime;   
+    }  
+  </script>
+</body>
+</html>
