@@ -54,7 +54,7 @@ catexmlhttp.onreadystatechange = function () {
                   "<a href='pages/online.html?" + data[i].id + "," + (i+1) + "'>" + data[i].name + "</a>" +
                 "</li>"
         if (i < 5) {
-          mobileItem += '<li><a href="pages/online.html?' + data[i].id + '"><img src="images/home/home_icon_china@2x.png" alt=""><span>' + data[i].name + '</span></a></li>'
+          mobileItem += '<li><a href="pages/online.html?' + data[i].id + "," + (i+1) + '"><img src="images/home/home_icon_china@2x.png" alt=""><span>' + data[i].name + '</span></a></li>'
         }
       } else {
         item += "<li alt='" + data[i].id + "'>" +
