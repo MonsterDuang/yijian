@@ -1,0 +1,54 @@
+/*jQzoom*/
+
+/* not main style */
+
+.jq_container {
+  height: 350px;
+  width: 350px;
+  overflow: hidden;
+  zoom: 1;
+  float: left;
+}
+
+.t_container {
+  height: 350px;
+  width: 350px;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.jqzoom {
+  /*必须，使弹出框鼠标移动框位置固定对应位置*/
+  position: relative ;
+  height: 100%;
+  width: 100%;
+}
+
+/* main style */
+
+.zoomdiv {
+  z-index: 999;
+  position: absolute;
+  top: 80px !important;
+  left: 370px !important;
+  width: 400px;
+  height: 400px;
+  background: #ffffff;
+  border: 1px solid #CCCCCC;
+  display: none;
+  text-align: center;
+  overflow: hidden;
+}
+.jqZoomPup {
+  z-index: 999;
+  visibility: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #aaa;
+  background: #ffffff;
+  opacity: 0.5;
+  cursor: pointer;
+}

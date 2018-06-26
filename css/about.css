@@ -1,0 +1,254 @@
+.container_parent{
+  padding-top: 30px;
+}
+.about-nav{
+  width: 100%;
+  height: 290px;
+}
+.about-title{
+  margin-bottom: 20px;
+  height:93px; 
+  background:rgba(149,27,37,1);
+  padding: 20px;
+  color: #fff;
+}
+.about-title p{
+  font-size: 24px;
+}
+.about-title span{
+  font-size: 18px;
+  color: #D9BBBD;
+}
+
+.about-items>li{
+  width: 360px;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 20px;
+  border-bottom: 1px #ccc solid;
+}
+.about-a, .join-a{
+  display: inline-block;
+  width: 100%;
+  color: #333;
+  font-size: 14px;
+}
+.about-items>li:hover {
+  box-shadow: #ccc 1px 0 7px
+}
+.about-items li img{
+  float: right;
+  position: relative;
+  top: 20px;
+}
+.join-us{
+  width: 360px;
+  height: 0px;
+  background: #fff;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.join-us p{
+  height: 44px;
+  line-height: 44px;
+}
+.join-a{
+  font-size: 12px;
+}
+.join-a:hover {
+  color: #951B25 !important;
+}
+
+.small-img{
+  width: 246px;
+  height: 246px;
+  margin-bottom: 20px;
+  float: left;
+}
+.profile-title{
+  width: 288px;
+  height: 246px;
+  text-align: center;
+  float: left;
+  padding: 80px;
+}
+.contact-us, .Join-us{
+  float: none;
+  height: 100px;
+  padding: 10px;
+  margin: 0 auto;
+}
+.profile-title b{
+  display: inline-block;
+  width:40px;
+  height:2px; 
+  background:rgba(149,27,37,1);
+  margin-bottom: 20px;
+}
+.profile-title p{
+  font-size: 14px;
+  color: #161414;
+  margin-bottom: 5px;
+}
+.profile-title span{
+  font-size: 12px;
+  color: #666;
+}
+.big-img, #b-map{
+  width: 780px;
+  height: 500px;
+  margin-bottom: 20px;
+}
+.profile-content{
+  text-indent: 2em;
+  color: #666;
+  font-size: 14px;
+  padding: 0 20px;
+  margin-bottom: 20px !important;
+}
+.profile-content:last-of-type{
+  margin-bottom: 0 !important;
+}
+.site-content p{
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+.site-content span{
+  font-size: 12px;
+  color: #666;
+  display: block;
+  line-height: 20px;
+}
+
+#rotate_img{
+  transition: transform 0.3s ease 0s;
+}
+.join-items li{
+  background: #FAF6F5;
+  padding: 20px;
+}
+.join-items li p{
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 14px !important;
+}
+.join-items li span{
+  font-size: 12px;
+  color: #666;
+  display: block;
+  line-height: 20px;
+}
+.join-items li b{
+  color: #951b25;
+}
+.join-items li button{
+  width: 150px;
+  height: 44px;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 12px;
+  color: #fff;
+  background: #951B25;
+  border: none;
+  margin-top: 20px;
+}
+.join-items li button:hover{
+  background: #BF2634;
+}
+
+.about-mobile{
+  display: none
+}
+@media only screen and (max-width: 1050px) {
+  .about-pc{
+    display: none;
+  }
+  .about-mobile{
+    display: block;
+  }
+  .products_nav_m {
+    justify-content: space-around;
+  }
+  #pro_content_m{
+    background: #fff;
+  }
+  .profile-m{
+    width:100%;
+    background: #fff;
+    margin-bottom: 0.94rem;
+  }
+  .profile-m img{
+    width: 100%;
+  }
+  .profile-m p{
+    font-size:0.94rem;
+    letter-spacing: 50;
+    color:rgba(51,51,51,1);
+    margin: .5rem 0 !important; 
+    border-left: 0.25rem solid #951B25;
+    padding-left: 0.31rem;
+  }
+  .profile-m span{
+    font-size:0.88rem;
+    letter-spacing: 50;
+    color:rgba(102,102,102,1);
+    line-height:1.31rem;
+  }
+  #b-map-m{
+    width: 100%;
+    height: 15.63rem;
+  }
+  .job-items{
+    width:100%;
+    background: #fff;
+    margin: -0.94rem 0 !important;
+  }
+  .job-items .job-name{
+    width: 100%;
+    height: 2.78rem;
+    border-bottom: 1px solid #ccc;
+    padding: 0.94rem;
+    font-size: .94rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #333;
+  }
+  .job-items .job-name:last-of-type{
+    border-bottom: none;
+  }
+  .job-items .job-name img{
+    width:0.47rem;
+    height:0.88rem;
+    transition: transform 0.3s ease 0s;
+  }
+  .job-detail{
+    width: 100%;
+    padding: 0 0.94rem;
+    height: 0;
+    overflow: hidden;
+  }
+  .job-detail p{
+    font-size: 0.9rem;
+    color: #333;
+    height: 0.88rem;
+    padding-left: 0.31rem;
+    letter-spacing: 50;
+    line-height: 1rem;
+    border-left: 0.25rem solid #951b25;
+    margin-bottom: 0.5rem !important;
+    margin-top: 1.88rem;
+  }
+  .job-detail p:first-of-type{
+    margin-top: 0;
+  }
+  .job-detail span{
+    display: block;
+    color: #666;
+    font-size: 0.84rem;
+  }
+  .job-detail span b{
+    color: #951B25
+  }
+}

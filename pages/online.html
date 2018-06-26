@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>在线展厅 - 易鉴</title>
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/banner.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/online.css">
+  <link rel="stylesheet" href="../css/container.css">
+  <script src="../js/config.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="../css/tell.css">
+  <link rel="stylesheet" href="../css/pagination.css">
+  <link rel="stylesheet" href="../css/float.css">
+  <script src="https://cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- PC -->
+  <div class="online-pc">
+    <!-- nav -->
+    <div class="nav">
+      <a href="../index.html" class="logo">
+        <img src="../images/home/home_logo_yijian@2x.png" alt="">
+      </a>
+      <ul class="nav-items">
+        <li class='nav-item'><a href='../index.html'>首页</a></li>
+        <li class='nav-item'>
+          <a href='online.html?1' style="color: #951B25; border-bottom: #951B25 solid 1px">在线展厅</a>
+          <ul class="nav-items2" id="online-nav">
+            <li><a href='online.html?1'>精品瓷器</a></li>
+            <li><a href='online.html?2'>古玩玉器</a></li>
+            <li><a href='online.html?3'>名家字画</a></li>
+            <li><a href='online.html?4'>奇珍杂项</a></li>
+          </ul>
+        </li>
+        <li class='nav-item'>
+            <a href='service.html?1'>服务项目</a>
+            <ul class="nav-items2" id="service-nav">
+              <li><a href='service.html?1'>藏品鉴定</a></li>
+              <li><a href='service.html?2'>藏品展览</a></li>
+              <li><a href='service.html?3'>藏品征集</a></li>
+              <li><a href='service.html?4'>藏品交易</a></li>
+            </ul>
+        </li>
+        <li class='nav-item'>
+          <a href='news.html?1'>最新资讯</a>
+          <ul class="nav-items2" id="news-nav">
+            <li><a href='news.html?1'>企业动态</a></li>
+            <li><a href='news.html?2'>业内资讯</a></li>
+          </ul>
+        </li>
+        <li class='nav-item'><a href='expert.html'>专家团队</a></li>
+        <li class='nav-item'>
+            <a href='about-us.html?1'>关于我们</a>
+            <ul class="nav-items2" id="about-nav">
+              <li><a href="about-us.html?1">公司简介</a></li>
+              <li><a href="about-us.html?2">业务指南</a></li>
+              <li><a href="about-us.html?3">联系我们</a></li>
+              <li><a href="about-us.html?4">加入我们</a></li>
+            </ul>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- banner -->
+    <div class="banner carousel slide" id="carouselExampleIndicators" data-ride="carousel">
+        <div class="banList carousel-inner" id="banList">
+         
+        </div>
+        <ol class="carousel-indicators" id="indicators">
+          
+        </ol>
+      </div>
+    <!-- 在线展厅 -->
+    <div class="container_parent">
+      <div class="container_pc">
+        <div class="left-content">
+          <div class="left-contact">
+            <p class="left-title">联系我们</p>
+            <form action="" id="msgContent">
+              <p class="contact"><span>姓名</span><input type="text" name="name"></p>
+              <p class="contact"><span>邮箱</span><input type="text" name="email"></p>
+              <p class="contact"><span>地址</span><input type="text" name="address"></p>
+            </form>
+            <p class="btn">
+              <button id="leaveMsg">留言</button>
+              <button>立即沟通</button>
+            </p>
+          </div>
+          <div class="left-news">
+              <p class="left-title">企业动态<a href='news.html?1'>查看更多</a></p>
+              <ul class='news-list'>
+                
+              </ul>
+          </div>
+        </div>
+        <div class="products">
+          <div class="map">您当前的位置：在线展厅 > <span id="now-site"></span></div>
+          <div class="form">
+            <input type="text" placeholder="请输入藏品名称" id="search-pc"><span id="search-btn"><img src="../images/online/online_icon_search@2x.png" alt=""></span>
+          </div>
+          <ul>
+            <div class="products_nav_container">
+              <ul class="products_nav" id="pro_dir">
+                
+              </ul>
+            </div>
+            <ul id="pro_content">
+             
+            </ul>
+            <div class="clear"></div>
+            <div id="pageList"></div>
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  
+    <!-- 底部 -->
+    <div class="footer">
+      <div class="footer-content">
+        <div>VIP电话热线 <span>&nbsp;&nbsp;400 616 2520</span></div>
+        <p><img src="../images/home/home_icon_address@2x.png" alt=""> 公司地址：深圳市宝安中心区卓越宝中时代广场A座1701</p>
+        <p>请广大藏友认真阅读文化部《艺术品经营管理办法》，确认未受到工作人员的不实宣传的误导和承诺。</p>
+      </div>
+      <p>深圳易鉴收藏咨询有限公司 版权所有</p>
+      <p><a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备16024959号-1</a></p>
+    </div>
+  
+    <!-- 在线客服 -->
+    <div id="rightArrow" style="right: 170px; background-position: 0px 0px;">
+      <a href="javascript:;" title="在线客服"></a>
+    </div>
+    <div id="floatDivBoxs" style="right: 0px;">
+      <div class="floatDtt">在线客服</div>
+      <div class="floatShadow">
+        <ul class="floatDqq">
+          <li style="padding-left:0px;">
+            <a target="_blank" href="tencent://message/?uin=2044256934&amp;Site=www.mjhzl.cn&amp;Menu=yes">
+              <img src="../images/float/qq.png" align="absmiddle">&nbsp;&nbsp;在线客服1号</a>
+          </li>
+          <li style="padding-left:0px;">
+            <a target="_blank" href="tencent://message/?uin=3158428036&amp;Site=www.mjhzl.cn&amp;Menu=yes">
+              <img src="../images/float/qq.png" align="absmiddle">&nbsp;&nbsp;在线客服2号</a>
+          </li>
+        </ul>
+        <div class="floatDtxt">热线电话</div>
+        <div class="floatDtel">400-678-8632</div>
+      </div>
+      <div class="floatDbg"></div>
+      <script>
+        var flag=1;
+        $('#rightArrow').click(function(){
+          if(flag==1){
+            $("#floatDivBoxs").animate({right: '-175px'},300);
+            $(this).animate({right: '-5px'},300);
+            $(this).css('background-position','-50px 0');
+            flag=0;
+          }else{
+            $("#floatDivBoxs").animate({right: '0'},300);
+            $(this).animate({right: '170px'},300);
+            $(this).css('background-position','0px 0');
+            flag=1;
+          }
+        });
+      </script>
+    </div>
+  
+      <!-- 左侧电话咨询 -->
+    <ins class="lxb-container" style="height: 220px; width: 140px; border: 0px none rgb(0, 0, 0); background-color: rgb(55, 187, 255); position: fixed; display: block !important; bottom: 21px; left: 0px;" id="LXB_CONTAINER">
+      <ins class="custom-text" style="left: 0px; top: 1px; width: 140px; height: 155px; background-image: url(../images/float/tell.png); z-index: 1;"></ins>
+      <ins class="lxb-hide-btn" id="lxb-hide-btn" style="left: 128px; top: 4px; width: 9px; height: 8px; background-image: url(../images/float/close.png); z-index: 2;"></ins>
+      <ins class="lxb-tl-phone" style="width: 118px; height: 20px; left: 11px; top: 111px; color: rgb(255, 255, 255); font-weight: bold; font-family: 微软雅黑; display: none;"></ins>
+      <input class="lxb-cb-input" id="phone" placeholder="请输入您的电话号码" style="left: 9px; top: 156px; width: 124px; height: 22px; line-height: 22px; border: 0px none rgb(0, 0, 0); z-index: 3;">
+      <input class="lxb-cb-input-btn" value="立即免费通话" style="left: 17px; top: 186px; width: 109px; height: 28px; border: 0px none rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 14px; font-weight: bold; background-color: rgb(3, 21, 155); z-index: 4;"
+        type="button">
+      <ins class="lxb-group-con" style="display: none;"></ins>
+      <ins class="lxb-cb-tip lxb-cb-tip-info" id="lxb-cb-tip" style="z-index: 2147483647; top: 0px; left: 154px; display: none;">
+        <ins class="lxb-cb-tip-con">
+          <ins class="lxb-cb-input-tip-mobile">手机请直接输入：如1860086xxxx</ins>
+          <ins class="lxb-cb-input-tip-tel">座机前加区号：如0105992xxxx</ins>
+          <ins class="lxb-cb-input-tip-em">输入您的电话号码，点击通话，稍后您将接到我们的电话，该通话对您
+            <em>完全免费</em>，请放心接听！</ins>
+        </ins>
+        <ins class="lxb-cb-tip-arrow arrow-left" style="top: 84px; left: -14px;"></ins>
+        <ins class="lxb-cb-tip-close">╳</ins>
+      </ins>
+      <script>
+        $('#phone').focus(function () {
+          $('#lxb-cb-tip').css('display', 'block')
+        })
+        $('#phone').blur(function () {
+          $('#lxb-cb-tip').css('display', 'none')
+        })
+        $('#lxb-hide-btn').click(function () {
+          $('#LXB_CONTAINER').css('display', 'none')
+        })
+      </script>
+    </ins>
+  </div>
+  <!-- Mobile -->
+  <div class="online-mobile">
+    <!-- nav -->
+    <div id="nav">
+      <a href="../index.html" class="logo">
+        <img src="../images/home/home_logo_yijian@2x.png" alt="">
+      </a>
+      <span class="nav-btn" id="nav-btn">
+        <img src="../images/home/nav_icon_menu@2x.png" alt="c">
+      </span>
+    </div>
+    <nav id="nav-items">
+      <ul class="nav-items3" id="nav-items3">
+        <li><a href="../index.html">首页<img src="../images/home/online_icon_right@2x.png" alt=""></a></li>
+        <li><a href="../pages/online.html" style="color: #951B25">在线展厅<img style="display: none;" src="../images/home/online_icon_right@2x.png" alt=""></a></li>
+        <li><a href="../pages/service.html">服务项目<img src="../images/home/online_icon_right@2x.png" alt=""></a></li>
+        <li><a href="../pages/news.html">最新资讯<img src="../images/home/online_icon_right@2x.png" alt=""></a></li>
+        <li><a href="../pages/expert.html">专家团队<img src="../images/home/online_icon_right@2x.png" alt=""></a></li>
+        <li><a href="../pages/about-us.html">关于我们<img src="../images/home/online_icon_right@2x.png" alt=""></a></li>
+      </ul>
+    </nav>
+    <div class="search">
+      <input type="search" name="search" id="search" class="search-input" placeholder="请输入您的搜索内容">
+    </div>
+    <div class="cate-title">
+      <p>在线展厅</p>
+      <span>Online Hall</span>
+    </div>
+    <div class="pro_dir_container">
+      <ul class="products_nav_m" id="pro_dir_m">
+        
+      </ul>
+    </div>
+    <ul id="pro_content_m">
+      
+    </ul>
+    <!-- footer -->
+    <div class="m-footer">
+      <p>深圳易鉴收藏咨询有限公司 版权所有</p>
+      <p><a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备16024959号-1</a></p>
+    </div>
+    <!-- 浮动在线客服返回顶部 -->
+    <div class="float-right-tell" id="frt">
+        <span class="chat">
+          <img src="../images/home/home_icon_online@2x.png" alt="">
+          在线客服
+        </span>
+        <span class="chat tell-chat">
+          <img src="../images/home/home_icon_phone@2x.png" alt="">
+          电话咨询
+        </span>
+      </div>
+      <div class="back-up" id="back-up">
+        <img src="../images/home/home_icon_up@2x.png" alt="">
+      </div>
+  </div>
+  <script src="../js/useRem.js"></script>
+  <script src="../js/banner.js"></script>
+  <script src="../js/pagination.js" type="text/javascript"></script>
+  <script src="../js/online.js" type="text/javascript"></script>
+  <script src="../js/nav.js" type="text/javascript"></script>
+  <script src="../js/tab.js" type="text/javascript"></script>
+</body>
+</html>

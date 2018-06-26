@@ -1,0 +1,153 @@
+/* 在线展厅 */
+
+.form{
+  width: 820px;
+  height: 65px;
+  position: relative;
+}
+.form input{
+  width: 270px;
+  height: 44px;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 0 10px;
+  font-size: 12px;
+  position: absolute;
+  top: 20px;
+  right: 44px;
+}
+.form input:focus{
+  border: 1px solid #951B25;
+}
+.form span{
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background: #951B25;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  cursor: pointer;
+}
+.form span:hover{
+  background: #BF2634;
+}
+.form span img{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.products_img {
+  width: 820px;
+  margin: 0 auto;
+}
+
+.products_img li {
+  width: 260px;
+  height: 300px;
+  border-radius: 5px;
+  background: #fff;
+  float: left;
+  margin-right: 20px;
+  margin-top: 30px;
+}
+.products_img li:hover{
+  box-shadow: rgba(0,0,0,.5) 0 0 15px;
+}
+.products_img li:nth-of-type(3n){
+  margin-right: 0;
+}
+.products_img li:nth-of-type(-n+3){
+  margin-top: 0;
+}
+.products_img li:hover .pro-img {
+  border-radius: 5px;
+  transform: scale(1.1);
+}
+.products_img li span{
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0 ;
+}
+.pro-img {
+  z-index: 100;
+  width: 260px;
+  height: 260px;
+  border-radius: 5px 5px 0 0;
+  transition: transform 0.3s ease 0s;
+}
+
+.products_img li p.ptit {
+  width: 260px;
+  height: 40px;
+  line-height: 40px;
+  color: #666;
+  font-size: 14px;
+  overflow: hidden;
+  position: relative;
+  top: -4px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.online-mobile{
+  display: none
+}
+.products_nav_container{
+  width: 100%;
+  overflow:auto;
+  margin: 20px 0;
+}
+.products_nav_container .products_nav{
+  margin: 0 !important;
+}
+@media only screen and (max-width: 1050px) {
+  .online-pc{
+    display: none;
+  }
+  .online-mobile{
+    display: block;
+  }
+  .products_img_m{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .products_img_m li{
+    height: 12.53rem;
+    width: 10.47rem;
+    margin-bottom: 0.63rem;
+  }
+  .products_img_m li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .products_img_m li a img{
+    width: 100%;
+    height: 10.47rem;
+    border-radius: 0.156rem 0.156rem 0 0;
+  }
+  .ptit-m{
+    width: 100%;
+    height: 2.06rem;
+    background: #fff;
+    color: #333;
+    font-size: 0.88rem;
+    line-height: 2.06rem;
+    position: relative;
+    top: -.1rem;
+    border-radius: 0 0 0.156rem 0.156rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

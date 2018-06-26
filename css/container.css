@@ -1,0 +1,238 @@
+.container_parent{
+  width: 100%;
+  background: #F9F9F9;
+  padding: 60px 0 30px 0;
+}
+.container_pc{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.left-content{
+  width: 360px;
+  float: left;
+}
+.left-contact{
+  width: 360px;
+  height: 360px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+.left-contact .left-title{
+  margin-bottom: 30px !important;
+}
+.contact{
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 20px !important;
+}
+.contact span{
+  font-size: 14px;
+  color: #333;
+  margin-right: 22px;
+}
+.contact input{
+  width: 270px;
+  height: 44px;
+  border: 1px solid #ccc;
+  outline: none;
+  text-indent: 20px;
+  font-size: 12px;
+  color: #666;
+}
+.contact input:focus{
+  border: 1px solid #951B25;
+}
+.btn{
+  width: 100%;
+  height: 44px;
+  padding: 0 20px;
+}
+.btn button{
+  width: 150px;
+  height: 44px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 12px;
+  color: #333;
+}
+.btn button:first-of-type:hover{
+  color: #951B25;
+  border: 1px solid #951B25;
+}
+.btn button:last-of-type:hover{
+  background: #BF2634
+}
+.btn button:last-of-type{
+  color: #fff;
+  background: #951B25;
+  border: none;
+  float: right;
+}
+.left-news{
+  width: 360px;
+  padding-bottom: 5px;
+  background: #FFF;
+}
+.left-title{
+  padding: 0 20px;
+  width: 100%;
+  height: 40px;
+  background-color: #FAF6F5;
+  line-height: 40px;
+  color: #161414;
+  font-size: 14px;
+  margin-bottom: 10px !important;
+}
+.left-title a{
+  float: right;
+  font-size: 12px;
+  color: #333;
+  text-decoration: underline
+}
+.left-title a:hover{
+  color: #951B25;
+}
+.news-list li{
+  line-height: 40px;
+  padding: 0 20px;
+}
+.news-item{
+  font-size: 14px;
+  color: #161414;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.news-item:hover{
+  color: #951B25
+}
+
+.products {
+  width: 820px;
+  position: relative;
+  float: right;
+}
+.map{
+  width: 820px;
+  height: 40px;
+  background: #fff;
+  font-size: 12px;
+  line-height: 40px;
+  color: #333;
+  padding-left: 20px;
+}
+
+.details-content {
+  width: 820px;
+  background: #fff;
+  padding: 20px;
+  margin-top: 20px;
+}
+.products_nav {
+  height: 46px;
+  background-color: #f1f1f1;
+  margin: 20px 0 !important;
+}
+
+.products_nav li {
+  float: left;
+  width: 25%;
+}
+
+.products_nav li a {
+  color: #666;
+  display: block;
+  text-align: center;
+  height: 46px;
+  font-size: 14px;
+  line-height: 46px;
+  transition: all .3s ease-in-out;
+}
+
+.products_nav li a:not([alt='1']):hover {
+  color: #951B25 !important
+}
+.mid-text:focus{
+  border: #951B25 solid 1px !important;
+}
+@media only screen and (max-width: 1050px) {
+  .cate-title{
+    width:100%;
+    height:3.88rem;
+    background: #f5f5f5;
+    text-align: center;
+    padding: .8rem;
+    line-height: 1.2rem
+  }
+  .cate-title p{
+    font-size:1.13rem;
+    color:rgba(51,51,51,1);
+  }
+  .cate-title span{
+    font-size:0.69rem;
+    color:rgba(153,153,153,1);
+  }
+  .search{
+    width:100%;
+    height:2.75rem;
+    position: relative;
+    background: #fff;
+  }
+  .search-input{
+    width:92%;
+    height:2.06rem;
+    border-radius: 1.03rem ;
+    border: none;
+    outline: none;
+    color: #888;
+    font-size: .88rem;
+    padding-right:0.9rem;
+    padding-left: 2.3rem;
+    position: absolute;
+    left: 0;right: 0;top: 0;bottom: 0;
+    margin: auto;
+    background: url(../images/online/class_icon_search@2x.png) no-repeat rgba(242,242,242,1);
+    background-size: 1.5rem 1.5rem;
+    background-position: 0.6rem
+  }
+  #pro_content_m{
+    width: 100%;
+    padding: 0.94rem;
+    background: #f5f5f5;
+  }
+  #pro_content_m > li{
+    width: 100%;
+  }
+  .pro_dir_container{
+    width: 100%;
+    overflow: auto;
+  }
+  .products_nav_m{
+    padding: 0 1.06rem;
+    min-width: 100%;
+    overflow-x: scroll;
+    height:2.75rem;
+    background:rgba(255,255,255,1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:0.94rem;
+    color: #333;
+  }
+  .products_nav_m li{
+    height: 100%;
+  }
+  .products_nav_m li a{
+    display: block;
+    height: 100%;
+    line-height: 2.75rem;
+  }
+  .empty{
+    width: 100%;
+    height: 0.63rem;
+    background: #f5f5f5;
+  }
+}

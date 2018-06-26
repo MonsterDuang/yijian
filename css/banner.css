@@ -1,0 +1,48 @@
+
+
+.banner {
+  width: 100%;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.banList {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 500px;
+}
+.carousel-item{
+  height: 100%;
+  touch-action: none;
+}
+.carousel-item img{
+  height: 100%;
+}
+.carousel-indicators .active{
+  background: #951B25 !important;
+}
+
+@media only screen and (max-width: 1050px) {
+  #carouselExampleIndicators {
+    width:100%;
+    height:13.19rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .banList {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 100%;
+  }
+  .carousel-indicators{
+    bottom: 0.75rem !important;
+  }
+}

@@ -1,0 +1,56 @@
+/* 服务项目 */
+.details-content img{
+  width: 780px;
+  margin-bottom: 16px;
+}
+.item-desc{
+  width:780px;
+  background:rgba(250,246,245,1);
+  padding: 20px;
+}
+.item-desc span{
+  display: inline-block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 6px;
+}
+.item-desc p{
+  font-size: 12px;
+  color: #666;
+  line-height: 20px;
+}
+
+.service-mobile{
+  display: none
+}
+.products_nav li{
+  width: 25%;
+}
+@media only screen and (max-width: 1050px) {
+  .service-pc{
+    display: none;
+  }
+  .service-mobile{
+    display: block;
+  }
+  
+  #pro_content_m {
+    background: #fff;
+  }
+  .details-content-m img{
+    width: 100%;
+    margin-bottom: 0.94rem;
+  }
+  .item-desc-m span{
+    display: inline-block;
+    font-size: .94rem;
+    color: #333;
+    margin-bottom: 0.6rem;
+  }
+  .item-desc-m p{
+    font-size: .88rem;
+    color: #666;
+    line-height: 1.49rem;
+  }
+
+}
